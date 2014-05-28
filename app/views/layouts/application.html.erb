@@ -22,6 +22,8 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="<%= 'active' if current_page?('/') %>"><a href="/">me</a></li>
+            <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
+            <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -29,15 +31,6 @@
 
 <!-- header -->
 <%= yield %>
-<form role="form">
-      <div class="form-group">
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-  </form>
 
 </body>
 </html>
