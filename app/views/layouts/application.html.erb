@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Profile</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>Profile</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
 </head>
 <body>
 <!-- header -->
 <div class="navbar navbar-inverse navbar-static navcolor" role="navigation">
-      <div class="container">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">ME </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ME </a>
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="<%= 'active' if current_page?('/') %>"><a href="/">me</a></li>
-            <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
-            <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="<%= 'active' if current_page?('/') %>"><a href="/">me</a></li>
+                <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
+                <li class="<%= '' if current_page?('/') %>"><a href="/">data</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
-      </div>
-  </div>
+    </div>
+</div>
 
 <!-- header -->
 <%= yield %>
+<div class="col-md-12" style="margin:5% 0px 5% 0px;">
+    <div class="container">
+        <div class="row nav-row">
+            <div class="col-md-2">
+                <%= image_tag("glyfy/git.png") %>
+                <p>GitHub</p>
+            </div>
+            <div class="col-md-2 active">
+                <%= image_tag("glyfy/bitbucket.png") %>
+                <p>Bitbucket</p>
+            </div>
+            <div class="col-md-2">
+                <%= image_tag("glyfy/stack.png") %>
+                <p>Stackoverslow</p>
+            </div>
+            <div class="col-md-2">
+                <%= image_tag("glyfy/twitter.png") %>
+                <p>Twitter</p>
+            </div>
+            <div class="col-md-2">
+                <%= image_tag("glyfy/linked.png") %>
+                <p>Linked in</p>
+            </div>
+            <div class="col-md-2">
+                <%= image_tag("glyfy/blog.png") %>
+                <p>Blogs</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
